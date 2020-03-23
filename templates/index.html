@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Process Mining</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="pragma" content="no-cache" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script src="{{ url_for('static', filename='imageupload.js') }}"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='customize.css')}}">
+</head>
+
+<body style="background-color: #fefbd8;">
+
+	<div class="jumbotron" style="background:transparent !important">
+	    <h1 align="center">Process Mining Made Easy</h1>
+	</div>
+
+	<div class="container">
+
+		 <img src="{{ url_for('static', filename='Images/PM1.png')}}" class = "rounded float-center" height="400" width="600" hspace="250">
+
+		 <div class="container">
+	            <div class="row text-white">
+	                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+	                    <div class="px-2">
+
+	                        <form id="fileUploadForm" method="post" enctype="multipart/form-data" action="/upload" class="justify-content-center">
+	                            <div class="form-group">
+	                                <input type="file" name="input_file" class="form-control">
+	                            </div>
+	                             <input type="submit" class="form-control btn btn-success" value="Upload">
+	                        </form>
+	                    </div>
+	                </div>
+	            </div>
+	    </div>
+
+	</div>
+
+</body>
+</html>
